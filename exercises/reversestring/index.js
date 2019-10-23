@@ -22,12 +22,14 @@
 //   return reversed
 // }
 
-// // SOLUTION 3 ~2 min
+// SOLUTION 3 ~2 min
 // function reverse(str){
 //   let array = str.split('')
 //   return array.reduce((reversed, character) => {
 //     return character + reversed
 //   }, '')
 // }
+
+//reverse('asdf')
 
 module.exports = reverse;
