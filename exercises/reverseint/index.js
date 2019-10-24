@@ -15,9 +15,9 @@
 //   return n < 0 ? result*-1 : result
 // }
 
-//1st solution
-function reverseInt(n){
-  return Math.sign(n)*parseInt(n.toString().split('').reverse().join(''))
-}
+// //1st solution
+// function reverseInt(n){
+//   return Math.sign(n)*parseInt(n.toString().split('').reverse().join(''))
+// }
 
 module.exports = reverseInt;
