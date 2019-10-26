@@ -14,13 +14,13 @@
 
 // // SOLUTION 2**
 // // don't use traditional for loop because of typo opportunities
-// function reverse(str) {
-//   let reversed = ''
-//   for (let character of str) {
-//     reversed = character + reversed
-//   }
-//   return reversed
-// }
+function reverse(str) {
+  let reversed = ''
+  for (let character of str) {
+    reversed = character + reversed
+  }
+  return reversed
+}
 
 // SOLUTION 3 ~2 min
 // function reverse(str){

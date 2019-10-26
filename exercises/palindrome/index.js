@@ -14,11 +14,11 @@
 // }
 
 // //SOLUTION2 - not the best, but good alternative
-// function palindrome(str){
-//   let array = str.split('')
-//   return array.every((letter, index) => {
-//     return letter === array[array.length - index - 1]
-//   })
-// }
+function palindrome(str){
+  let array = str.split('')
+  return array.every((letter, index) => {
+    return letter === array[array.length - index - 1]
+  })
+}
 
 module.exports = palindrome;
