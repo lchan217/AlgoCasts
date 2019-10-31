@@ -14,6 +14,49 @@
 
 const Stack = require('./stack');
 
-class Queue {}
+//this makes more sense when you look at the diagrams
+
+class Queue {
+  constructor(){
+    this.first = new Stack()
+    this.second = new Stack()
+  }
+
+  add(record){
+    this.first.push(record)
+  }
+
+  remove(){
+    //remove everything from stack A and put into B
+    while(this.first.peek()){
+      const record = this.first.pop();
+      this.second.push(record)
+    }
+
+    const record = this.second.pop()
+    // restore first stack
+    while(this.second.peek()){
+      const record = this.second.pop()
+      this.first.push(record)
+    }
+
+    return record
+  }
+
+  peek(){
+    while(this.first.peek()){
+      const record = this.first.pop()
+      this.second.push(record)
+    }
+
+    const record = this.second.peek()
+
+    while(this.second.peek()){
+      const record = this.second.pop()
+      this.first.push(record)
+    }
+    return record
+  }
+}
 
 module.exports = Queue;
