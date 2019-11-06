@@ -29,8 +29,8 @@ function chunk(array, size){
   const chunked = []
   let i = 0
   while (i < array.length) {
-
-    chunked.push(array.slice(i, i + size ))
+    let section = array.slice(i, i + size)
+    chunked.push(array.slice(section))
     i = i + size
   }
   return chunked
